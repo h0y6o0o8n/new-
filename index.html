@@ -4,147 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>야구 좋아하세요?</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&display=swap">
+    <style>
+        body {
+            font-family: 'Jua', sans-serif;
+            background:url('image/kbo.jpg') no-repeat center center fixed;
+            background-size: cover;
+            background-blend-mode: multiply;
+            background-color: rgba(255, 203, 144, 0.473);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 50px;
+            animation: fadeIn 2s;
+        }
+
+
+        .section-divider {
+            width: 100%;
+            height: 30px;
+            background-color: rgb(235, 167, 135);
+            margin: 30px auto;
+        }
+
+        .content-box {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            border: 4px solid #000;
+            padding: 20px;
+            width: 220px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: rotateIn 1s;
+        }
+
+        .box h2 {
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+
+        .box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .box li {
+            margin: 30px 0;
+        }
+
+        .box li a {
+            text-decoration: none;
+            font-size: 24px;
+            color: #949bff;
+            transition: color 0.3s;
+        }
+
+        .box li a:hover {
+            color: #ff4500;
+        }
+
+        .box:hover {
+            transform: translateY(-10px) rotate(5deg);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+    </style>
 </head>
 <body>
-    <header>
+    <div class="container">
         <h1>야구 좋아하세요?</h1>
-        <nav>
-            <ul>
-                <li><a href="#LG.html">LG TWINS</a></li>
-                <li><a href="#DOOSAN">DOOSAN BEARS</a></li>
-                <li><a href="#SSG">SSG LANDERS</a></li>
-                <li><a href="#KIA">KIA TIGERS</a></li>
-                <li><a href="#KIWOOM">KIWOOM HEROES</a></li>
-                <li><a href="#SAMSUNG">SAMSUNG LIONS</a></li>
-                <li><a href="#NC">NC DINOS</a></li>
-                <li><a href="#HANHWA">HANHWA EAGLES</a></li>
-                <li><a href="#LOTTE">LOTTE GIANTS</a></li>
-
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="banner">
-        </section>
-        <section class="teams">
-            <h2>야구의 기본</h2>
-            <h3>▶인원</h3>
-            <h3>▶포지션</h3>
-            <h3>▶규칙</h3>
-            <h3>▶인원</h3>
-    <footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-        <p>&copy; 2024 야구 좋아하세요?. All rights reserved.</p>
-    </footer>
+        <div class="title-divider"></div>
+        <div class="section-divider"></div>
+        <div class="content-box">
+            <div class="box">
+                <h2>정보</h2>
+                <ul>
+                    <li><a href="definition.html">정의</a></li>
+                    <li><a href="his.html">역사</a></li>
+                    <li><a href="rule.html">규칙</a></li>
+                    <li><a href="sche.html">일정</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>구단</h2>
+                <ul>
+                    <li><a href="team/team1.html">LG 트윈스</a></li>
+                    <li><a href="team/team2.html">두산 베어스</a></li>
+                    <li><a href="team/team3.html">키움 히어로즈</a></li>
+                    <li><a href="team/team4.html">KT 위즈</a></li>
+                    <li><a href="team/team5.html">SSG 랜더스</a></li>
+                    <li><a href="team/team6.html">기아 타이거즈</a></li>
+                    <li><a href="team/team7.html">한화 이글스</a></li>
+                    <li><a href="team/team8.html">삼성 라이온즈</a></li>
+                    <li><a href="team/team9.html">NC 다이노스</a></li>
+                    <li><a href="team/team10.html">롯데 자이언츠</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
