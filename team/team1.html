@@ -3,78 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>팀 1</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&display=swap">
+    <title>구단 소개 - LG TWINS</title>
+    <div class="navigation">
+        <a href="/index.html">홈으로 돌아가기</a>
+    </div>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap">
     <style>
         body {
-            font-family: 'Jua', sans-serif;
-            background: url('team1_background.jpg') no-repeat center center fixed;
-            background-size: cover;
-            background-blend-mode: multiply;
-            background-color: rgba(255, 255, 255, 0.5);
+            font-family: 'Gowun Dodum', sans-serif;
+            background-color: #d3ffb5; /* 연두색 배경 */
             margin: 0;
-            padding: 0;
+            display: flex;
+            flex-direction: column; /* 컨텐츠를 세로 방향으로 정렬하기 위한 설정 */
+            justify-content: center; /* 세로 가운데 정렬 */
+            align-items: center; /* 가로 가운데 정렬 */
+            min-height: 100vh; /* 화면 전체 높이를 사용 */
         }
-
-        .container {
-            text-align: center;
-            margin-top: 50px;
+        .main-content {
+            padding: 20px;
+            text-align: center; /* 중앙 정렬을 위한 설정 */
+            background-color: #fff; /* 흰색 배경 추가 */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px; /* 위쪽 여백 추가 */
+            width: 80%; /* 너비를 화면 너비의 80%로 설정 */
+            max-width: 1200px; /* 최대 너비 설정 */
+            border-radius: 10px; /* 모서리 둥글게 */
         }
-
+        .title-container {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         h1 {
-            font-size: 45px;
-            font-weight: bold;
-            background-color: rgb(135, 135, 255);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            display: inline-block;
+            font-size: 48px;
+            margin-bottom: 10px; /* 제목 아래 마진을 조정 */
         }
-
-        .content {
-            margin: 50px auto;
+        .title-container img {
+            vertical-align: middle;
+            margin-left: 15px;
+            width: 50px; /* 이미지 크기 조절 */
+            height: auto;
+        }
+        .divider {
             width: 80%;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .content h2 {
-            font-size: 34px;
+            height: 4px;
+            background-color: #ff0000;
+            margin: 0 auto;
+            margin-top: 20px;
             margin-bottom: 20px;
         }
-
-        .content p {
-            font-size: 24px;
-            line-height: 1.5;
+        .section {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center; /* 중앙 정렬을 위한 설정 */
         }
-
-        .back-link {
-            display: block;
-            margin: 20px 0;
-            font-size: 24px;
+        .section h2 {
+            margin-bottom: 10px;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3x3 그리드 설정 */
+            gap: 20px; /* 그리드 사이 간격 설정 */
+            margin-top: 20px;
+        }
+        .team-item {
+            text-align: center;
+            cursor: pointer; /* 포인터 형태로 변경하여 클릭 가능한 상태 표시 */
+            transition: transform 0.3s ease; /* 호버 효과를 위한 애니메이션 설정 */
+        }
+        .team-item img {
+            width: 150px; /* 이미지 크기 조절 */
+            height: auto;
+            border-radius: 8px; /* 이미지 모서리 둥글게 */
+            transition: transform 0.3s ease; /* 호버 효과를 위한 애니메이션 설정 */
+        }
+        .team-item p {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .team-item:hover {
+            transform: translateY(-10px); /* 호버 시 위로 조금씩 이동하는 애니메이션 효과 */
+        }
+        .navigation {
+            margin-top: 20px;
+        }
+        .navigation a {
+            display: inline-block;
+            margin: 0 10px;
             text-decoration: none;
-            color: #007bff;
+            color: #ff0000;
+            font-size: 18px;
             transition: color 0.3s;
         }
-
-        .back-link:hover {
-            color: #0056b3;
+        .navigation a:hover {
+            color: #ff0000;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>팀 1</h1>
-        <div class="content">
-            <h2>팀 소개</h2>
-            <p>팀 1은 1982년에 창단된 대한민국 프로 야구 팀 중 하나로, 현재 KBO 리그에서 활동하고 있습니다. 이 팀은 여러 차례 우승을 차지한 강력한 팀으로 알려져 있습니다.</p>
-            <h2>주요 선수</h2>
-            <p>주요 선수로는 선수 A, 선수 B, 선수 C 등이 있으며, 이들은 팀의 핵심 선수로 활약하고 있습니다.</p>
-            <h2>역사</h2>
-            <p>팀 1은 1982년 창단 이후 많은 역경을 딛고 여러 차례 우승을 차지하며 KBO 리그의 강팀으로 자리매김했습니다. 특히 1995년과 2001년 시즌에서 최고의 성적을 기록하며 팬들의 사랑을 받았습니다.</p>
-            <a class="back-link" href='index.html'>← 홈으로 돌아가기</a>
+    <div class="main-content">
+        <div class="title-container">
+            <h1>LG TWINS</h1>
+            <img src="/image/emblem_LG.png" alt="LG TWINS">
         </div>
+        <div class="divider"></div>
+        <div class="section">
+            <h2>마스코트</h2>
+            <img src="/image/mascot_LG.png" alt="LG TWINS 마스코트">
+            <p>LG 트윈스의 현 마스코트는 럭키와 스타로 2017년에 처음 공개되었다.</p> 
+                <p>두 캐릭터의 이름은 LG그룹의 과거 명칭이었던 럭키금성(Lucky GoldStar)에서 이름을 따온 듯.</p>
+                <P>다만 LG 트윈스의 새로운 CI와 로고에 대한 불만의 불똥이 마스코트에까지 튀면서 영 좋지 못한 반응을 얻었다.</P>
+                <p>두 마스코트의 등번호는 90, 94. 90년대 LG가 우승한 연도에서 유래했다.</p>
+        </div>
+        <div class="section">
+            <h2>구장</h2>
+            <img src="/image/stadium_LG.jpg" alt="LG TWINS 구장">
+            <p><a href="https://m.place.naver.com/place/13202577/location?entry=plt&filter=location&selected_place_id=13202577" target="_blank">지도</a></p>
+            <p>위치: 서울특별시 송파구 올림픽로 25(잠실동)
+                <p>개장 연도: 1982년</p>
+                <p>수용 인원: 약 26,000명</p>
+                
+        </div>
+        <div class="section">
+            <h2>감독 및 선수 소개</h2>
+            <h2>감독</h2>
+            <img src="/image/lg감.png" alt="LG TWINS 감독">
+            <p>85. 염경엽 (Youm Kyung Youp)</p>
+            <p>1968년 03월 01일</p>
+            <p>178cm 65kg</p>
+            <p>광주서석초-충장중-광주제일고-고려대</p>
+            <div class="box">
+            </div>
+    
+            <div class="box">
+                <h2>선수</h2>
+                <img src="/lg/강효종20220106-005[20220207035831652].png" alt="강효종">
+                <p>46. 강효종  </p>
+                <p>투수 우투우타</p>
+            <p>2002.10.14  184cm 86kg</p>
+            <img src="/lg/구본혁 20240108 -004[20240115092907005].png" alt="구본혁">
+                <p>6. 구본혁 </p>
+                <p>내야수 우투우타</p>
+            <p>1997.01.11  177cm 75kg</p>
+            <img src="/lg/김범석 20230104  -004[20230130040747854].png" alt="김범석">
+                <p>55. 김범석  </p>
+                <p>포수 우투우타</p>
+            <p>2004.05.21  178cm 110kg</p>
+            <img src="/lg/김현수20220105-002[20220207044736751].png" alt="김현수">
+                <p>22. 김현수  </p>
+                <p> 외야수 우투좌타</p>
+            <p>1988.01.12  188cm 105kg</p>
+            <img src="/lg/문보경20220105-003[20220207044254560].png" alt="문보경">
+                <p>2. 문보경 </p>
+                <p>내야수 우투좌타</p>
+            <p>2000.07.19  182cm 88kg</p>
+            <img src="/lg/문성주[20220214062337395].png" alt="문성주">
+                <p>8. 문성주  </p>
+                <p>외야수 좌투좌타</p>
+            <p>1997.02.20  175cm 78kg</p>
+            <img src="/lg/박동원 20230104  -004[20230130040942096].png" alt="박동원">
+                <p>27. 박동원 </p>
+                <p>포수 우투우타</p>
+            <p>1990.04.07  178cm 92kg</p>
+            <img src="/lg/박해민20220107-004[20220207044928179].png" alt="박해민">
+                <p>17. 박해민 </p>
+                <p>외야수 우투좌타</p>
+            <p>1990.02.24  180cm 75kg</p>
+            <img src="/lg/신민재20220106-004[20220207044428409].png" alt="신민재">
+                <p>4. 신민재 </p>
+                <p>내야수 우투좌타</p>
+            <p>1996.01.21  171cm 67kg</p>
+            <img src="/lg/엔스 20240209-001[20240221014259179].png" alt="엔스">
+                <p>34. 엔스 </p>
+                <p>투수 좌투좌타</p>
+            <p>1991.05.16  185cm 95kg</p>
+            <img src="/lg/오스틴 20230321[20230322033602127].png" alt="오스틴">
+                <p>23. 오스틴 </p>
+                <p>내야수 우투우타</p>
+            <p>1993.10.14  183cm 97kg</p>
+            <img src="/lg/오지환20220105-003[20220207044448554].png" alt="오지환">
+                <p>10. 오지환 </p>
+                <p>내야수 우투좌타</p>
+            <p>1990.3.12  185cm 80kg</p>
+            <img src="/lg/이우찬 20230104  -003[20230130034415731].png" alt="이우찬">
+                <p>21. 이우찬 </p>
+                <p>투수 좌투좌타</p>
+            <p>1992.08.04  185cm 97kg</p>
+            <img src="/lg/임찬규20220107-009[20220207041541064].png" alt="임찬규">
+                <p>1. 임찬규 </p>
+                <p>투수 우투우타</p>
+            <p>1992.11.20  185cm 80kg</p>
+            <img src="/lg/켈리 20240209-001[20240221014334741].png" alt="켈리">
+                <p>3. 켈리 </p>
+                <p>투수 우투우타</p>
+            <p>1989.10.04  191cm 98kg</p>
+            <img src="/lg/홍창기20220105[20220207045208319].png" alt="홍창기">
+                <p>51. 홍창기 </p>
+                <p>외야수 우투좌타</p>
+            <p>1993.11.21  189cm 94kg</p>
+            </div>
+    
+        </div>
+        <div class="section">
+            <h2>사이트</h2>
+            <p><a href="https://www.lgtwins.com" target="_blank">LG TWINS 공식 사이트 바로가기</a></p>
+            <p><a href="https://www.youtube.com/@LGTwinsTV" target="_blank">YouTube</a></p>
+            <p><a href="https://www.instagram.com/lgtwinsbaseballclub/" target="_blank">Instagram</a></p>
+        </div>
+
     </div>
 </body>
 </html>

@@ -4,111 +4,179 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>야구 좋아하세요?</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap">
     <style>
         body {
-            font-family: 'Jua', sans-serif;
-            background:url('image/kbo.jpg') no-repeat center center fixed;
-            background-size: cover;
-            background-blend-mode: multiply;
-            background-color: rgba(255, 203, 144, 0.473);
+            font-family: 'Gowun Dodum', sans-serif;
+            background-color: #d3ffb5; /* 연두색 배경 */
             margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            text-align: center;
-            margin-top: 50px;
-            animation: fadeIn 2s;
-        }
-
-
-        .section-divider {
-            width: 100%;
-            height: 30px;
-            background-color: rgb(235, 167, 135);
-            margin: 30px auto;
-        }
-
-        .content-box {
             display: flex;
-            justify-content: center;
-            gap: 50px;
-            margin-top: 50px;
-            flex-wrap: wrap;
+            flex-direction: column; /* 컨텐츠를 세로 방향으로 정렬하기 위한 설정 */
+            justify-content: center; /* 세로 가운데 정렬 */
+            align-items: center; /* 가로 가운데 정렬 */
+            min-height: 100vh; /* 화면 전체 높이를 사용 */
         }
-
-        .box {
-            border: 4px solid #000;
+        .main-content {
             padding: 20px;
-            width: 220px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            animation: rotateIn 1s;
+            text-align: center; /* 중앙 정렬을 위한 설정 */
+            background-color: #fff; /* 흰색 배경 추가 */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px; /* 위쪽 여백 추가 */
+            width: 80%; /* 너비를 화면 너비의 80%로 설정 */
+            max-width: 1200px; /* 최대 너비 설정 */
+            border-radius: 10px; /* 모서리 둥글게 */
         }
-
-        .box h2 {
-            font-size: 34px;
+        .title-container {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px; /* 제목 아래 마진을 조정 */
+        }
+        .title-container img {
+            vertical-align: middle;
+            margin-left: 15px;
+            width: 50px; /* 이미지 크기 조절 */
+            height: auto;
+        }
+        .divider {
+            width: 80%;
+            height: 4px;
+            background-color: #007bff;
+            margin: 0 auto;
+            margin-top: 20px;
             margin-bottom: 20px;
         }
-
-        .box ul {
-            list-style: none;
-            padding: 0;
+        .info-container, .team-container {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center; /* 중앙 정렬을 위한 설정 */
         }
-
-        .box li {
-            margin: 30px 0;
+        .info-container h2, .team-container h2 {
+            margin-bottom: 10px;
         }
-
-        .box li a {
-            text-decoration: none;
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3열 그리드 설정 */
+            gap: 20px; /* 그리드 사이 간격 설정 */
+            margin-top: 20px;
+        }
+        .info-item {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .info-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .info-item h3 {
             font-size: 24px;
-            color: #949bff;
-            transition: color 0.3s;
+            margin-bottom: 10px;
         }
-
-        .box li a:hover {
-            color: #ff4500;
+        .info-item p {
+            font-size: 18px;
         }
-
-        .box:hover {
-            transform: translateY(-10px) rotate(5deg);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3x3 그리드 설정 */
+            gap: 20px; /* 그리드 사이 간격 설정 */
+            margin-top: 20px;
         }
-
+        .team-item {
+            text-align: center;
+            cursor: pointer; /* 포인터 형태로 변경하여 클릭 가능한 상태 표시 */
+            transition: transform 0.3s ease; /* 호버 효과를 위한 애니메이션 설정 */
+        }
+        .team-item img {
+            width: 150px; /* 이미지 크기 조절 */
+            height: auto;
+            border-radius: 8px; /* 이미지 모서리 둥글게 */
+            transition: transform 0.3s ease; /* 호버 효과를 위한 애니메이션 설정 */
+        }
+        .team-item p {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .team-item:hover {
+            transform: translateY(-10px); /* 호버 시 위로 조금씩 이동하는 애니메이션 효과 */
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>야구 좋아하세요?</h1>
-        <div class="title-divider"></div>
-        <div class="section-divider"></div>
-        <div class="content-box">
-            <div class="box">
-                <h2>정보</h2>
-                <ul>
-                    <li><a href="definition.html">정의</a></li>
-                    <li><a href="his.html">역사</a></li>
-                    <li><a href="rule.html">규칙</a></li>
-                    <li><a href="sche.html">일정</a></li>
-                </ul>
+    <div class="main-content">
+        <div class="title-container">
+            <h1>야구 좋아하세요?</h1>
+            <img src="image/야구이미지.jpg" alt="야구 이미지"> <!-- 제목 옆에 이미지 추가 -->
+        </div>
+        <div class="divider"></div>
+        <div class="info-container">
+            <h2>정보</h2>
+            <div class="info-grid">
+                <div class="info-item" onclick="location.href='history.html';">
+                    <h3>역사</h3>
+                    <p>야구의 역사에 대한 설명을 여기에 추가하세요.</p>
+                </div>
+                <div class="info-item" onclick="location.href='rules.html';">
+                    <h3>규칙</h3>
+                    <p>야구의 규칙에 대한 설명을 여기에 추가하세요.</p>
+                </div>
+                <div class="info-item" onclick="location.href='schedule.html';">
+                    <h3>2024 일정</h3>
+                    <p>야구 경기 일정에 대한 설명을 여기에 추가하세요.</p>
+                </div>
             </div>
-            <div class="box">
-                <h2>구단</h2>
-                <ul>
-                    <li><a href="team/team1.html">LG 트윈스</a></li>
-                    <li><a href="team/team2.html">두산 베어스</a></li>
-                    <li><a href="team/team3.html">키움 히어로즈</a></li>
-                    <li><a href="team/team4.html">KT 위즈</a></li>
-                    <li><a href="team/team5.html">SSG 랜더스</a></li>
-                    <li><a href="team/team6.html">기아 타이거즈</a></li>
-                    <li><a href="team/team7.html">한화 이글스</a></li>
-                    <li><a href="team/team8.html">삼성 라이온즈</a></li>
-                    <li><a href="team/team9.html">NC 다이노스</a></li>
-                    <li><a href="team/team10.html">롯데 자이언츠</a></li>
-                </ul>
+        </div>
+        <div class="team-container">
+            <h2>구단</h2>
+            <div class="team-grid">
+                <div class="team-item" onclick="location.href='team/team1.html';">
+                    <img src="image/emblem_LG.png" alt="LG TWINS">
+                    <p>LG TWINS</p>
+                </div>
+                <div class="team-item" onclick="location.href='team/team2.html';">
+                    <img src="image/emblem_SK.png" alt="SSG LANDERS">
+                    <p>SSG LANDERS</p>
+                </div>
+                <div class="team-item" onclick="location.href='team/team3.html';">
+                    <img src="image/emblem_OB.png" alt="DOOSAN BEARS">
+                    <p>DOOSAN BEARS</p>
+                </div>
+                <div class="team-item" onclick="location.href='team/team4.html';">
+                    <img src="image/emblem_WO.png" alt="KIWOOM HEROES">
+                    <p>KIWOOM HEROES</p>
+                </div>
+                <div class="team-item" onclick="location.href='team/team5.html';">
+                    <img src="image/emblem_KT.png" alt="KT WIZ">
+                    <p>KT WIZ</p>
+                </div>
+                <div class="team-item" onclick="location.href='team/team6.html';">
+                    <img src="image/emblem_HT.png" alt="KIA TIGERS">
+                    <p>KIA TIGERS</p>
+                </div>
+                <div class="team-item" onclick="location.href='team/team7.html';">
+                    <img src="image/emblem_SS.png" alt="SAMSUNG LIONS">
+                    <p>SAMSUNG LIONS</p>
+                </div>
+                <div class="team-item" onclick="location.href='team/team8.html';">
+                    <img src="image/emblem_LT.png" alt="LOTTE GIANTS">
+                    <p>LOTTE GIANTS</p>
+                </div>
+                <div class="team-item" onclick="location.href='team/team9.html';">
+                    <img src="image/emblem_NC.png" alt="NC DINOS">
+                    <p>NC DINOS</p>
+                </div>
+                <div class="team-item" onclick="location.href='team/team10.html';">
+                    <img src="image/emblem_HH.png" alt="HANHWA EAGLES">
+                    <p>HANHWA EAGLES</p>
+                </div>
             </div>
         </div>
     </div>

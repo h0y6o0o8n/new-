@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구단 소개 - SSG LANDERS</title>
+    <div class="navigation">
+        <a href="/index.html">홈으로 돌아가기</a>
+    </div>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap">
+    <style>
+        body {
+            font-family: 'Gowun Dodum', sans-serif;
+            background-color: #d3ffb5; /* 연두색 배경 */
+            margin: 0;
+            display: flex;
+            flex-direction: column; /* 컨텐츠를 세로 방향으로 정렬하기 위한 설정 */
+            justify-content: center; /* 세로 가운데 정렬 */
+            align-items: center; /* 가로 가운데 정렬 */
+            min-height: 100vh; /* 화면 전체 높이를 사용 */
+        }
+        .main-content {
+            padding: 20px;
+            text-align: center; /* 중앙 정렬을 위한 설정 */
+            background-color: #fff; /* 흰색 배경 추가 */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px; /* 위쪽 여백 추가 */
+            width: 80%; /* 너비를 화면 너비의 80%로 설정 */
+            max-width: 1200px; /* 최대 너비 설정 */
+            border-radius: 10px; /* 모서리 둥글게 */
+        }
+        .title-container {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px; /* 제목 아래 마진을 조정 */
+        }
+        .title-container img {
+            vertical-align: middle;
+            margin-left: 15px;
+            width: 50px; /* 이미지 크기 조절 */
+            height: auto;
+        }
+        .divider {
+            width: 80%;
+            height: 4px;
+            background-color: #ff4646;
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center; /* 중앙 정렬을 위한 설정 */
+        }
+        .section h2 {
+            margin-bottom: 10px;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3x3 그리드 설정 */
+            gap: 20px; /* 그리드 사이 간격 설정 */
+            margin-top: 20px;
+        }
+        .team-item {
+            text-align: center;
+            cursor: pointer; /* 포인터 형태로 변경하여 클릭 가능한 상태 표시 */
+            transition: transform 0.3s ease; /* 호버 효과를 위한 애니메이션 설정 */
+        }
+        .team-item img {
+            width: 150px; /* 이미지 크기 조절 */
+            height: auto;
+            border-radius: 8px; /* 이미지 모서리 둥글게 */
+            transition: transform 0.3s ease; /* 호버 효과를 위한 애니메이션 설정 */
+        }
+        .team-item p {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .team-item:hover {
+            transform: translateY(-10px); /* 호버 시 위로 조금씩 이동하는 애니메이션 효과 */
+        }
+        .navigation {
+            margin-top: 20px;
+        }
+        .navigation a {
+            display: inline-block;
+            margin: 0 10px;
+            text-decoration: none;
+            color: #ff3939;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        .navigation a:hover {
+            color: #ff3e3e;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <div class="title-container">
+            <h1>SSG LANDERS</h1>
+            <img src="/image/emblem_SK.png" alt="SSG LANDERS">
+        </div>
+        <div class="divider"></div>
+        <div class="section">
+            <h2>마스코트</h2>
+            <img src="/ssg/쓱/랜디.webp" alt=" 마스코트">
+            <p>2021년 3월 30일 창단식에서 공개된 마스코트.</p> 
+                <p>카네 코르소종의 랜디라는 이름을 가진 진회색 개다.</p>
+                <P>사람들에게 용기와 사랑, 위로를 주는 가장 친근한 동물인 개를 모티브로 개발했다고 한다.</P>
+                <p>용맹함과 충성심으로 가족과 친구를 강인하게 지켜내는 개, 카네 코르소를 활용해 SSG의 새로운 도전과 승리의 과정에 힘을 더해줄 상징이 될 수 있도록 디자인했다고 한다.</p>
+        </div>
+        <div class="section">
+            <h2>구장</h2>
+            <img src="/ssg/쓱/구장.webp" alt="구장">
+            <p><a href="https://m.place.naver.com/place/13202558/home?entry=pll" target="_blank">지도</a></p>
+            <p>위치: 인천 미추홀구 매소홀로 618
+                <p>개장 연도: 2002년</p>
+                <p>수용 인원: 약 25,000명</p>
+                <p>시설: 최근 리모델링을 통해 더욱 현대적이고 편리한 시설을 갖추게 되었습니다.</p>
+        </div>
+        <div class="section">
+            <h2>감독 및 선수 소개</h2>
+            <h2>감독</h2>
+            <img src="/ssg/쓱/71. 이숭용.png" alt=" 감독">
+            <p>71.이숭용 (Lee Soong Yong) </p>
+            <p>1971년 03월 10일</p>
+            <p>186cm 98kg</p>
+            <p>용암초-중앙중-중앙고-경희대</p>
+            <div class="box">
+            </div>
+    
+            <div class="box">
+                <h2>선수</h2>
+                <img src="/ssg/쓱/18. 고명준.png" alt="고명준">
+                <p>18. 고명준  </p>
+                <p>내야수 우투우타</p>
+            <p>2002.07.08 185cm 94kg</p>
+            <img src="/ssg/쓱/15. 고효준.png" alt="고효준">
+                <p>15. 고효준 </p>
+                <p>투수 좌투좌타</p>
+            <p>1983.02.08</p>
+            <img src="/ssg/쓱/29. 김광현.png" alt="김광현">
+                <p>29. 김광현  </p>
+                <p>투수 좌투좌타</p>
+            <p>1988.07.22 188cm 88kg</p>
+            <img src="/ssg/쓱/2. 박성한.png" alt="박성한">
+                <p>2. 박성한  </p>
+                <p>내야수 우투좌타</p>
+            <p>1998.03.30 180cm 77kg</p>
+            <img src="/ssg/쓱/27. 에레디아.png" alt="에레디아">
+            <p>27. 에레디아  </p>
+            <p>외야수 좌투우타</p>
+            <p>1991.01.31 177cm 88kg</p>
+            <img src="/ssg/쓱/37. 오태곤.png" alt="오태곤">
+            <p>37. 오태곤  </p>
+            <p>와야수 우투우타</p>
+        <p>1991. 11.18 186cm 88kg</p>
+        <img src="/ssg/쓱/59. 이지영.png" alt="이지영">
+        <p>59. 이지영  </p>
+        <p>포수 우투우타</p>
+    <p>1986.02.29 177cm 88kg</p>
+            <img src="/ssg/쓱/56. 전의산.png" alt="전의산">
+                <p>56. 전의산  </p>
+                <p>내야수 우투좌타</p>
+            <p>2000.11.25 188cm 98kg</p>
+            <img src="/ssg/쓱/14. 최정.png" alt="최정">
+                <p>14. 최정  </p>
+                <p>내야수 우투우타</p>
+            <p>1987.02.28 180cm 90kg</p>
+            <img src="/ssg/쓱/54. 최지훈.png" alt="최지훈">
+            <p>54. 최지훈  </p>
+            <p>외야수 우투좌타</p>
+        <p>1997.02.23 178cm 82kg</p>
+        <img src="/ssg/쓱/17. 외야수.png" alt="추신수">
+        <p>17. 추신수 </p>
+        <p>외야수 좌투좌타 </p>
+    <p>1982.07.13 180cm 97kg</p>
+    <img src="/ssg/쓱/13. 하재훈.png" alt="하재훈">
+    <p>13. 하재훈  </p>
+    <p>외야수 우투우타</p>
+<p>1990.10.29 182cm 90kg</p>
+<img src="/ssg/쓱/35. 한유섬.png" alt="한유섬">
+<p>35. 한유섬  </p>
+<p>외야수 우투좌타</p>
+<p>1989.08.09 190cm 105kg</p>
+        </div>
+        <div class="section">
+            <h2>사이트</h2>
+            <p><a href="https://www.ssglanders.com/main" target="_blank">공식 사이트 바로가기</a></p>
+            <p><a href="https://www.youtube.com/@SSGLANDERS" target="_blank">YouTube</a></p>
+            <p><a href="https://www.instagram.com/ssglanders.incheon/" target="_blank">Instagram</a></p>
+        </div>
+
+    </div>
+</body>
+</html>

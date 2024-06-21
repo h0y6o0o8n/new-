@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구단 소개 - KIWOOM HEROES</title>
+    <div class="navigation">
+        <a href="/index.html">홈으로 돌아가기</a>
+    </div>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap">
+    <style>
+        body {
+            font-family: 'Gowun Dodum', sans-serif;
+            background-color: #d3ffb5; /* 연두색 배경 */
+            margin: 0;
+            display: flex;
+            flex-direction: column; /* 컨텐츠를 세로 방향으로 정렬하기 위한 설정 */
+            justify-content: center; /* 세로 가운데 정렬 */
+            align-items: center; /* 가로 가운데 정렬 */
+            min-height: 100vh; /* 화면 전체 높이를 사용 */
+        }
+        .main-content {
+            padding: 20px;
+            text-align: center; /* 중앙 정렬을 위한 설정 */
+            background-color: #fff; /* 흰색 배경 추가 */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px; /* 위쪽 여백 추가 */
+            width: 80%; /* 너비를 화면 너비의 80%로 설정 */
+            max-width: 1200px; /* 최대 너비 설정 */
+            border-radius: 10px; /* 모서리 둥글게 */
+        }
+        .title-container {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px; /* 제목 아래 마진을 조정 */
+        }
+        .title-container img {
+            vertical-align: middle;
+            margin-left: 15px;
+            width: 50px; /* 이미지 크기 조절 */
+            height: auto;
+        }
+        .divider {
+            width: 80%;
+            height: 4px;
+            background-color: #90285d;
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center; /* 중앙 정렬을 위한 설정 */
+        }
+        .section h2 {
+            margin-bottom: 10px;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3x3 그리드 설정 */
+            gap: 20px; /* 그리드 사이 간격 설정 */
+            margin-top: 20px;
+        }
+        .team-item {
+            text-align: center;
+            cursor: pointer; /* 포인터 형태로 변경하여 클릭 가능한 상태 표시 */
+            transition: transform 0.3s ease; /* 호버 효과를 위한 애니메이션 설정 */
+        }
+        .team-item img {
+            width: 150px; /* 이미지 크기 조절 */
+            height: auto;
+            border-radius: 8px; /* 이미지 모서리 둥글게 */
+            transition: transform 0.3s ease; /* 호버 효과를 위한 애니메이션 설정 */
+        }
+        .team-item p {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .team-item:hover {
+            transform: translateY(-10px); /* 호버 시 위로 조금씩 이동하는 애니메이션 효과 */
+        }
+        .navigation {
+            margin-top: 20px;
+        }
+        .navigation a {
+            display: inline-block;
+            margin: 0 10px;
+            text-decoration: none;
+            color: #ff0000;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        .navigation a:hover {
+            color: #ad9898;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <div class="title-container">
+            <h1>DOOSAN BEARS</h1>
+            <img src="/image/emblem_WO.png" alt="키움">
+        </div>
+        <div class="divider"></div>
+        <div class="section">
+            <h2>마스코트</h2>
+            <img src="/두산/두산/cjf.jpg" alt=" 마스코트">
+            <p>1999년 구단 이름을 두산 베어스로 바꾸고 BI가 달라짐에 따라 마스코트도 바뀌었다.</p> 
+                <p>이름은 철웅이. 기존의 곰에 나사로 철판을 연결한 것처럼 보이는 사이보그 로봇 곰이다. </p>
+             
+        </div>
+        <div class="section">
+            <h2>구장</h2>
+            <img src="/키움/키움/돔.jpg" alt="구장">
+            <p><a href="https://m.place.naver.com/place/18967604/home?entry=plt" target="_blank">지도</a></p>
+            <p>위치: 서울 구로구 경인로 430 고척스카이돔
+                <p>개장 연도: 2015년</p>
+                <p>수용 인원: 약 16,000명</p>
+                <p>시설: 한국 최초의 돔구장으로, 날씨에 구애받지 않고 경기를 관람할 수 있습니다.</p>
+                
+        </div>
+        <div class="section">
+            <h2>감독 및 선수 소개</h2>
+            <h2>감독</h2>
+            <img src="/키움/키움/78. 홍원기.jpg" alt="감독">
+            <p>78. 홍원기 (Hong Won Gi) </p>
+            <p>1973년 6월 5일</p>
+            <p>187cm 95kg</p>
+            <p>중동초-공주중-공주고-고려대학교</p>
+            <div class="box">
+            </div>
+            <h2>선수</h2>
+            <div class="box">
+                <img src="/키움/키움/3. 김혜성 내야수.jpg" alt="김혜성">
+                <p>3. 김혜성 </p>
+                <p></p>
+                <p></p>
+                <img src="/키움/키움/3. 김혜성 내야수.jpg" alt="김혜성">
+                <p>3. 김혜성 </p>
+                <p></p>
+                <p></p>
+                <img src="/키움/키움/3. 김혜성 내야수.jpg" alt="김혜성">
+                <p>3. 김혜성 </p>
+                <p></p>
+                <p></p>
+                <img src="/키움/키움/3. 김혜성 내야수.jpg" alt="김혜성">
+                <p>3. 김혜성 </p>
+                <p></p>
+                <p></p>
+                <img src="/키움/키움/3. 김혜성 내야수.jpg" alt="김혜성">
+                <p>3. 김혜성 </p>
+                <p></p>
+                <p></p>
+                <img src="/키움/키움/3. 김혜성 내야수.jpg" alt="김혜성">
+                <p>3. 김혜성 </p>
+                <p></p>
+                <p></p>
+                <img src="/키움/키움/3. 김혜성 내야수.jpg" alt="김혜성">
+                <p>3. 김혜성 </p>
+                <p></p>
+                <p></p>
+                <img src="/키움/키움/3. 김혜성 내야수.jpg" alt="김혜성">
+                <p>3. 김혜성 </p>
+                <p></p>
+                <p></p>
+                <img src="/키움/키움/3. 김혜성 내야수.jpg" alt="김혜성">
+                <p>3. 김혜성 </p>
+                <p></p>
+                <p></p>
+    
+        </div>
+        <div class="section">
+            <h2>사이트</h2>
+            <p><a href="https://www.doosanbears.com/" target="_blank">공식 사이트 바로가기</a></p>
+            <p><a href="https://www.youtube.com/@bearstv1982" target="_blank">YouTube</a></p>
+            <p><a href="https://www.instagram.com/doosanbears.1982/" target="_blank">Instagram</a></p>
+        </div>
+
+    </div>
+</body>
+</html>
+
